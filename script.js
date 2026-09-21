@@ -7,7 +7,50 @@ const menuButton = mobileNavigation.querySelector(".menu-toggle");
 
 year.textContent = new Date().getFullYear();
 
-if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+const counters = document.querySelectorAll("[data-count]");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (counters.length && "IntersectionObserver" in window && !prefersReducedMotion) {
+  counters.forEach((counter) => {
+    counter.textContent = `${counter.dataset.start}${counter.dataset.suffix || ""}`;
+  });
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      counters.forEach((counter) => {
+        const start = Number(counter.dataset.start);
+        const target = Number(counter.dataset.count);
+        const suffix = counter.dataset.suffix || "";
+        const duration = 900;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const easedProgress = 1 - Math.pow(1 - progress, 3);
+          const value = Math.round(start + ((target - start) * easedProgress));
+
+          counter.textContent = `${value}${suffix}`;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      });
+
+      counterObserver.disconnect();
+    });
+  }, { threshold: 0.35 });
+
+  counterObserver.observe(document.querySelector(".stats-banner"));
+}
+
+if ("IntersectionObserver" in window && !prefersReducedMotion) {
   const titles = document.querySelectorAll("h1, h2");
   const titleObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
