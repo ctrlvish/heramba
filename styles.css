@@ -298,10 +298,21 @@ h1 span {
 }
 
 .service-card {
-  min-height: 13rem;
-  padding: clamp(1.75rem, 2.5vw, 2.5rem);
+  min-height: 0;
   border-radius: 1.5rem;
   background: var(--white);
+  overflow: hidden;
+}
+
+.service-card > img {
+  width: 100%;
+  height: clamp(15rem, 25vw, 18rem);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.service-card-content {
+  padding: clamp(1.5rem, 2.2vw, 2rem);
 }
 
 .service-card h3 {
@@ -378,6 +389,11 @@ h1 span {
 
 .about p:last-child {
   margin-bottom: 0;
+}
+
+.about a {
+  color: var(--accent-ink);
+  font-weight: 550;
 }
 
 .contact {
@@ -733,7 +749,14 @@ html.is-keyboard-nav .mobile-nav.is-open .mobile-menu a:last-child:active {
 
   .service-card {
     min-height: 0;
+  }
+
+  .service-card-content {
     padding: 1.75rem;
+  }
+
+  .service-card > img {
+    height: 13rem;
   }
 
   .work-grid {
@@ -806,7 +829,11 @@ html.is-keyboard-nav .mobile-nav.is-open .mobile-menu a:last-child:active {
   }
 
   .service-card {
-    padding: 2rem;
+    padding: 0;
+  }
+
+  .service-card-content {
+    padding: 1.75rem;
   }
 
   .service-card p {

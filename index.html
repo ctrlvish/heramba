@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/favicon-ganesha.png" type="image/png" sizes="256x256">
   <link rel="apple-touch-icon" href="assets/favicon-ganesha.png">
   <link rel="preload" href="assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="styles.css?v=15">
   <script src="script.js?v=7" defer></script>
 </head>
 <body>
@@ -66,20 +66,32 @@
 
         <div class="service-grid">
           <article class="service-card">
-            <h3>Turnkey projects</h3>
-            <p>Infrastructure support for multi-operator wireless telecommunication systems</p>
+            <img src="assets/service-turnkey.webp" alt="Telecommunications technicians inspecting rooftop antenna equipment" width="1200" height="800" loading="lazy">
+            <div class="service-card-content">
+              <h3>Turnkey projects</h3>
+              <p>Infrastructure support for multi-operator wireless telecommunication systems</p>
+            </div>
           </article>
           <article class="service-card">
-            <h3>Engineering services</h3>
-            <p>Civil Mechanical and Electrical works and in-building cabling</p>
+            <img src="assets/service-engineering.webp" alt="Engineer inspecting cabling and network equipment inside a building" width="1200" height="800" loading="lazy">
+            <div class="service-card-content">
+              <h3>Engineering services</h3>
+              <p>Civil Mechanical and Electrical works and in-building cabling</p>
+            </div>
           </article>
           <article class="service-card">
-            <h3>Fiber network solutions</h3>
-            <p>Fire cable laying, termination, and testing with acceptance reports</p>
+            <img src="assets/service-fibre.webp" alt="Technician splicing fibre-optic cable with specialist equipment" width="1200" height="800" loading="lazy">
+            <div class="service-card-content">
+              <h3>Fiber network solutions</h3>
+              <p>Fire cable laying, termination, and testing with acceptance reports</p>
+            </div>
           </article>
           <article class="service-card">
-            <h3>Project Management services</h3>
-            <p>End to end management of wireless telecommunication projects</p>
+            <img src="assets/service-project-management.webp" alt="Project manager and engineer reviewing plans at a telecommunications site" width="1200" height="800" loading="lazy">
+            <div class="service-card-content">
+              <h3>Project Management services</h3>
+              <p>End to end management of wireless telecommunication projects</p>
+            </div>
           </article>
         </div>
       </div>
@@ -115,9 +127,8 @@
 
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="shell about-inner">
-        <h2 id="about-title">Good work starts with good communication.</h2>
-        <p>Heramba Communications provides telecommunications services shaped around each project’s needs. We work to complete projects efficiently and on schedule, keeping clients informed from the first conversation through final handover.</p>
-        <p>High-quality work and open communication are how we build lasting relationships.</p>
+        <h2 id="about-title">About us</h2>
+        <p>Our mission at Heramba Communications is simple. To provide high-quality services for our valued clients. Our team goes above and beyond to cater to each project’s specific needs. Through open communication and exceptional service, we hope you’ll find what you’re looking for with our Telecommunications Services. We complete projects efficiently and on schedule, and go above and beyond to form lasting relationships with our clients. For more information or general inquiries, <a href="#contact">get in touch</a> today.</p>
       </div>
     </section>
 
@@ -128,7 +139,8 @@
           <p>New project, existing work, or a general question? Send us a message and we’ll get back to you.</p>
         </div>
 
-        <form id="contact-form" class="contact-form" action="" method="POST" data-form-endpoint="">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xrpbpkdo" method="POST" data-form-endpoint="https://formspree.io/f/xrpbpkdo">
+          <input type="hidden" name="_subject" value="New enquiry from the Heramba Communications website">
           <div class="form-row">
             <div class="form-field">
               <label for="name">Name</label>

@@ -6,11 +6,9 @@ A dependency-free, single-page website ready for GitHub Pages. Edit `index.html`
 
 From this folder, run `python3 -m http.server 8000`, then open `http://localhost:8000`.
 
-## Connect the contact form
+## Contact form
 
-GitHub Pages cannot send email directly. Create a form at [Formspree](https://formspree.io/), set its notification recipient to `vengad@herambacommunications.com`, and confirm that address. Copy the endpoint, which looks like `https://formspree.io/f/xxxxxxxx`, into both the `action` and `data-form-endpoint` attributes on `#contact-form` in `index.html`. Until then, form submissions display an honest setup message and the email link remains available.
-
-Test a real submission after publishing. The visitor should remain on this page and see the success message, and the email must arrive in the recipient inbox. Consider Formspree's domain restriction and spam settings after the final domain is live.
+The form submits to Formspree endpoint `https://formspree.io/f/xrpbpkdo` and displays success or error feedback without leaving the page. Confirm the Formspree recipient address, then test a real submission after publishing. The visitor should remain on this page and see the success message, and the email must arrive at `vengad@herambacommunications.com`. Consider Formspree's domain restriction and spam settings after the final domain is live.
 
 ## Publish on GitHub Pages
 
