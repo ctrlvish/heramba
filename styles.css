@@ -8,14 +8,15 @@
 
 :root {
   color-scheme: light;
-  --ink: #10273c;
-  --muted: #476073;
-  --blue: #2479a9;
-  --blue-dark: #176189;
-  --blue-light: #e8f3fa;
-  --surface: #f4f7fa;
-  --navy: #102b43;
-  --navy-dark: #092034;
+  --ink: #30231e;
+  --muted: #6b5a52;
+  --accent: #d9a72c;
+  --accent-dark: #bd8515;
+  --accent-soft: #fff3cf;
+  --accent-ink: #8a5b00;
+  --surface: #f7f3ee;
+  --brown: #4a2d23;
+  --brown-dark: #2b1b16;
   --white: #ffffff;
   --shell: 1080px;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
@@ -68,13 +69,13 @@ button {
 }
 
 :focus-visible {
-  outline: 3px solid #6cbce8;
+  outline: 3px solid #e4b743;
   outline-offset: 4px;
 }
 
 ::selection {
-  color: var(--navy);
-  background: #b9e1f6;
+  color: var(--brown-dark);
+  background: #f2d98d;
 }
 
 .shell {
@@ -89,7 +90,7 @@ button {
   left: 1rem;
   padding: 0.8rem 1rem;
   color: var(--white);
-  background: var(--navy);
+  background: var(--brown);
 }
 
 .skip-link:focus {
@@ -137,8 +138,8 @@ button {
 .header-contact {
   padding: 0.75rem 1.2rem;
   border-radius: 0.75rem;
-  color: var(--white);
-  background: var(--blue);
+  color: var(--brown-dark);
+  background: var(--accent);
   transition: background-color 160ms ease, transform 160ms var(--ease-out);
 }
 
@@ -184,7 +185,7 @@ h1 {
 }
 
 h1 span {
-  color: var(--blue);
+  color: var(--accent-ink);
 }
 
 .hero-content > p {
@@ -210,15 +211,15 @@ h1 span {
 }
 
 .button-primary {
-  color: var(--white);
-  background: var(--blue);
+  color: var(--brown-dark);
+  background: var(--accent);
 }
 
 .hero-image-wrap {
   width: 100%;
   padding: clamp(0.7rem, 1.2vw, 1.1rem);
   border-radius: clamp(1.25rem, 3vw, 2.25rem);
-  background: var(--blue);
+  background: var(--brown);
 }
 
 .hero-image-wrap img {
@@ -355,7 +356,7 @@ h1 span {
 }
 
 .about {
-  background: var(--blue-light);
+  background: var(--accent-soft);
 }
 
 .about-inner {
@@ -381,7 +382,7 @@ h1 span {
 
 .contact {
   color: var(--white);
-  background: var(--navy);
+  background: var(--brown);
 }
 
 .contact-intro {
@@ -389,7 +390,7 @@ h1 span {
 }
 
 .contact-intro p {
-  color: #c8d9e4;
+  color: #eadfd8;
 }
 
 .contact-form {
@@ -425,7 +426,7 @@ h1 span {
   border-radius: 0.8rem;
   outline: none;
   color: var(--white);
-  background: #21445f;
+  background: #65453a;
 }
 
 .form-field select {
@@ -441,9 +442,9 @@ h1 span {
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
-  outline: 3px solid #7ac7ee;
+  outline: 3px solid #e4b743;
   outline-offset: 3px;
-  background: #2b526f;
+  background: #765247;
 }
 
 .honeypot {
@@ -476,7 +477,7 @@ h1 span {
 .form-status {
   max-width: 30rem;
   margin: 0;
-  color: #d8edf9;
+  color: #f1e8e2;
   font-size: 1rem;
 }
 
@@ -486,7 +487,7 @@ h1 span {
 
 .contact-alternative {
   margin: 2.5rem 0 0;
-  color: #c8d9e4;
+  color: #eadfd8;
   font-size: 1rem;
   text-align: center;
 }
@@ -498,8 +499,8 @@ h1 span {
 }
 
 .site-footer {
-  color: #c3d1dc;
-  background: var(--navy-dark);
+  color: #d9ccc5;
+  background: var(--brown-dark);
 }
 
 .footer-inner {
@@ -520,20 +521,20 @@ h1 span {
 
 @media (hover: hover) and (pointer: fine) {
   .desktop-nav a:hover {
-    color: var(--blue);
+    color: var(--accent-ink);
   }
 
   .header-contact:hover,
   .button-primary:hover {
-    background: var(--blue-dark);
+    background: var(--accent-dark);
   }
 
   .button-light:hover {
-    background: #d9eef9;
+    background: var(--accent-soft);
   }
 
   .contact-alternative a:hover {
-    color: #a7d7f0;
+    color: #f0c85a;
   }
 }
 
@@ -653,7 +654,7 @@ html.is-keyboard-nav .mobile-nav.is-open .mobile-menu a:last-child:active {
     padding: 1.25rem 1.5rem 2rem;
     border-radius: 0 0 1.5rem 1.5rem;
     background: var(--white);
-    box-shadow: 0 1.5rem 2.5rem rgb(16 43 67 / 14%);
+    box-shadow: 0 1.5rem 2.5rem rgb(74 45 35 / 16%);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -710,8 +711,8 @@ html.is-keyboard-nav .mobile-nav.is-open .mobile-menu a:last-child:active {
     margin-top: 0.75rem;
     padding: 1rem 1.25rem;
     border-radius: 0.85rem;
-    color: var(--white);
-    background: var(--blue);
+    color: var(--brown-dark);
+    background: var(--accent);
     font-size: 1.1rem;
     letter-spacing: 0;
     text-align: center;
@@ -742,15 +743,15 @@ html.is-keyboard-nav .mobile-nav.is-open .mobile-menu a:last-child:active {
 
 @media (max-width: 760px) and (hover: hover) and (pointer: fine) {
   .menu-toggle:hover {
-    background: var(--blue-light);
+    background: var(--accent-soft);
   }
 
   .mobile-menu a:not(:last-child):hover {
-    color: var(--blue);
+    color: var(--accent-ink);
   }
 
   .mobile-nav.is-open .mobile-menu a:last-child:hover {
-    background: var(--blue-dark);
+    background: var(--accent-dark);
     transition-delay: 0ms;
   }
 }
